@@ -1,77 +1,106 @@
 # Contributing to Awesome AI Apps
 
-First off, thank you for considering contributing to Awesome AI Apps! It's people like you that make this such a great collection of resources for the community. Your contributions are valuable and help everyone learn and build better AI applications.
+Thank you for your interest in contributing to **Awesome AI Apps**! 🎉
+We welcome contributions of all kinds — new AI app examples, bug fixes, documentation improvements, and more.
 
-This document provides guidelines for contributing to this repository. Please read it carefully to ensure a smooth and effective contribution process.
+## Table of Contents
 
-## Code of Conduct
+- [Getting Started](#getting-started)
+- [How to Contribute](#how-to-contribute)
+- [Adding a New AI App](#adding-a-new-ai-app)
+- [Code Style Guidelines](#code-style-guidelines)
+- [Pull Request Process](#pull-request-process)
+- [Community Guidelines](#community-guidelines)
 
-This project and everyone participating in it is governed by a Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior.
+---
 
-## How Can I Contribute?
+## Getting Started
 
-There are many ways to contribute, from adding new projects to improving existing ones, reporting bugs, or suggesting enhancements.
+1. **Fork** the repository by clicking the "Fork" button at the top right of the page.
+2. **Clone** your fork locally:
+   ```bash
+   git clone https://github.com/<your-username>/awesome-ai-apps.git
+   cd awesome-ai-apps
+   ```
+3. **Create a new branch** for your contribution:
+   ```bash
+   git checkout -b feat/your-feature-name
+   ```
 
-### Reporting Bugs
+---
 
-If you find a bug in one of the projects, please open an issue. Make sure to include:
+## How to Contribute
 
-- A clear and descriptive title.
-- A detailed description of the bug, including steps to reproduce it.
-- The name of the project directory where the bug occurred.
-- Any relevant error messages or logs.
+There are several ways you can contribute:
 
-### Suggesting Enhancements
+- 🆕 **Add a new AI app** — Submit a new example app built with AI/LLM tools.
+- 🐛 **Report a bug** — Use the [bug report template](.github/ISSUE_TEMPLATE/bug_report.yml).
+- 💡 **Request a feature** — Use the [feature request template](.github/ISSUE_TEMPLATE/feature_request.yml).
+- ❓ **Ask a question** — Use the [question template](.github/ISSUE_TEMPLATE/question.yml).
+- 📝 **Improve documentation** — Fix typos, clarify instructions, or add missing docs.
 
-If you have an idea for a new project or an improvement to an existing one, please open an issue to discuss it. This allows us to coordinate efforts and prevent duplication of work.
+---
 
-### Your First Code Contribution
+## Adding a New AI App
 
-Unsure where to begin? You can start by looking through `good first issue` and `help wanted` issues.
+Each app should live in its own directory following this structure:
 
-## Adding a New Project
+```
+apps/
+└── your-app-name/
+    ├── README.md        # Description, setup instructions, demo screenshot
+    ├── requirements.txt # Python dependencies
+    ├── app.py           # Main entry point
+    └── ...              # Any additional files
+```
 
-We welcome new project examples! To maintain consistency and quality, please follow these guidelines when adding a new project.
+Please use the [README template](.github/README_TEMPLATE.md) when creating your app's `README.md`.
 
-### 1. Create an Issue
+### App Requirements
 
-Before starting your work, **create an issue** that describes the project you want to add. This helps us track contributions and avoid multiple people working on the same thing.
+- The app must be functional and runnable locally.
+- Include clear setup and run instructions in the `README.md`.
+- List all dependencies in `requirements.txt`.
+- Do **not** commit API keys or secrets — use `.env` files and document required environment variables.
+- Add a `.env.example` file if environment variables are needed.
 
-### 2. One Project per Pull Request
+---
 
-To keep our review process clean and focused, **each new project must be submitted in its own Pull Request.** Do not bundle multiple new projects into a single PR. Each PR should be linked to the issue you created.
+## Code Style Guidelines
 
-### 3. Folder Structure and Naming
+- Follow [PEP 8](https://peps.python.org/pep-0008/) for Python code.
+- Use meaningful variable and function names.
+- Add docstrings to functions and classes.
+- Keep functions small and focused on a single responsibility.
+- Run the linter before submitting:
+  ```bash
+  pip install ruff
+  ruff check .
+  ```
 
-- **Place your project in the appropriate category folder:**
-  - `starter_ai_agents/`: For simple, boilerplate-style agents.
-  - `simple_ai_agents/`: For straightforward, practical use-cases.
-  - `advance_ai_agents/`: For complex, multi-step workflows.
-  - `rag_apps/`: For Retrieval-Augmented Generation examples.
-  - `memory_agents/`: For agents with memory capabilities.
-  - `mcp_ai_agents/`: For projects using the Model Context Protocol.
-- **Follow the naming convention for your project's folder:** The name should be descriptive and use snake_case. For example: `finance_agent`, `blog_writing_agent`.
-
-### 4. Project README
-
-- **Every project MUST have its own `README.md` file.**
-- This README should provide clear, detailed instructions on how to set up and run the project.
-- **Use the provided template as a reference:** Your project's README should follow the structure and include the sections outlined in `.github/README_TEMPLATE.md`. This ensures all projects in the collection are well-documented and easy for others to use.
-
-### 5. Development Best Practices
-
-- **Dependencies:** Include a `requirements.txt` or, preferably, define dependencies within a `pyproject.toml` file in your project's directory.
-- **Code Style:** Write clean, readable code. We encourage the use of a code formatter like [Black](https://github.com/psf/black) or [Ruff](https://docs.astral.sh/ruff/formatter/) to maintain a consistent style.
-- **Testing:** While not strictly required for all examples, adding tests is highly encouraged. If you do, create a `tests/` subdirectory within your project folder.
-- **No Secrets:** Ensure you do not commit any API keys, passwords, or other sensitive information. Use environment variables and provide a `.env.example` file.
+---
 
 ## Pull Request Process
 
-1. **Fork the repository** and create your branch from `main`.
-2. Make your changes, adhering to the guidelines above.
-3. Ensure your code lints and any tests pass.
-4. Create a Pull Request to the `main` branch of the original repository.
-5. **Link your PR to the issue** you created (e.g., "Closes #123").
-6. Provide a clear title and a concise description of your contribution in the PR.
+1. Ensure your branch is up to date with `main`:
+   ```bash
+   git fetch upstream
+   git rebase upstream/main
+   ```
+2. Push your branch and open a Pull Request against `main`.
+3. Fill out the [Pull Request template](.github/PULL_REQUEST_TEMPLATE.md) completely.
+4. Ensure all CI checks pass.
+5. A maintainer will review your PR — please be responsive to feedback.
+6. Once approved, your PR will be merged. 🎊
 
-Thank you again for your contribution!
+---
+
+## Community Guidelines
+
+- Be respectful and inclusive.
+- Provide constructive feedback.
+- Follow the [Code of Conduct](CODE_OF_CONDUCT.md) (coming soon).
+
+If you have any questions, feel free to open a [question issue](.github/ISSUE_TEMPLATE/question.yml) or start a discussion.
+
+Happy building! 🚀
