@@ -20,6 +20,8 @@ This repository is a fork of [Arindam200/awesome-ai-apps](https://github.com/Ari
 
 Each app is self-contained, well-documented, and designed to be easy to run locally.
 
+> **Personal note:** I'm using this fork to learn and experiment with AI app patterns. My focus is on RAG pipelines and LLM-based tooling.
+
 ## Apps
 
 | App | Description | Stack | Author |
@@ -46,7 +48,7 @@ cd awesome-ai-apps
 # Navigate to a specific app
 cd <app-directory>
 
-# Install dependencies
+# Install dependencies (prefer uv for faster installs)
 pip install -r requirements.txt
 
 # Follow the app-specific README for configuration and running
