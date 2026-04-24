@@ -78,7 +78,7 @@ Please use the [README template](.github/README_TEMPLATE.md) when creating your 
   ruff check .
   ```
 
-> **Personal note:** I also like to run `ruff format .` to auto-format code before checking, saves a lot of manual cleanup.
+> **Personal note:** I also like to run `ruff format .` to auto-format code before checking, saves a lot of manual cleanup. It's also worth running `ruff check --fix .` to let ruff auto-fix any fixable lint issues in one go.
 
 ---
 
@@ -92,9 +92,4 @@ Please use the [README template](.github/README_TEMPLATE.md) when creating your 
 2. Push your branch and open a Pull Request against `main`.
 3. Fill out the [Pull Request template](.github/PULL_REQUEST_TEMPLATE.md) completely.
 4. Ensure all CI checks pass.
-5. A maintainer will review your PR — please be responsive to feedback.
-6. Once approved, your PR will be merged. 🎊
-
----
-
-## Community Gu
+5. A maintai
