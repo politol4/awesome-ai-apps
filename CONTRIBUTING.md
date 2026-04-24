@@ -78,6 +78,8 @@ Please use the [README template](.github/README_TEMPLATE.md) when creating your 
   ruff check .
   ```
 
+> **Personal note:** I also like to run `ruff format .` to auto-format code before checking, saves a lot of manual cleanup.
+
 ---
 
 ## Pull Request Process
@@ -95,12 +97,4 @@ Please use the [README template](.github/README_TEMPLATE.md) when creating your 
 
 ---
 
-## Community Guidelines
-
-- Be respectful and inclusive.
-- Provide constructive feedback.
-- Follow the [Code of Conduct](CODE_OF_CONDUCT.md) (coming soon).
-
-If you have any questions, feel free to open a [question issue](.github/ISSUE_TEMPLATE/question.yml) or start a discussion.
-
-Happy building! 🚀
+## Community Gu
